@@ -33,12 +33,9 @@ public class TaskActivity extends Activity {
 	{
 	    super.onStart();
 	 
-	    CCDirector.sharedDirector().attachInView(_glSurfaceView);
-	 
-	    //CCDirector.sharedDirector().setDisplayFPS(true);
-	 
-	    CCDirector.sharedDirector().setAnimationInterval(1.0f / 60.0f);
-	    
+	    CCDirector.sharedDirector().attachInView(_glSurfaceView); 
+	    CCDirector.sharedDirector().setDisplayFPS(false);	 
+	    CCDirector.sharedDirector().setAnimationInterval(1.0f / 60.0f);	    
 	    CCScene scene = GameLayer.scene();
 		CCDirector.sharedDirector().runWithScene(scene);
 	}
